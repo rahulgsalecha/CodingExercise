@@ -1,0 +1,30 @@
+Instruction:
+============
+
+The goal is to identify a crashing or exception bug and provide a fix in the following pseudo code. 
+There is a single producer and multiple consumers. The producer puts items on the queue, while the consumers 
+remove items from queue and process them. condition.signal() will wake up one of the blocked consumers 
+waiting on the condition. While waiting in blocked state, wait() will release the mutex. 
+Upon receiving the signal, wait() will unblock and re-acquire the mutex. There are sufficient consumers 
+to process the items where the queue will not build up. Context switch can occur anywhere in the code. 
+Please describe how the bug can occur and provide a fix. 
+
+Producer
+while (true) {
+    item = generate_item()
+    mutex.lock()
+    fifo_queue.push(item)
+    mutex.unlock()
+    condition.signal()
+}
+
+Consumers
+while(true) {
+    mutex.lock()
+    if (fifo_queue.empty()) {
+        condition.wait(mutex)
+    }
+    item = fifo_queue.remove()
+    mutex.unlock()
+    process_item(item)
+}

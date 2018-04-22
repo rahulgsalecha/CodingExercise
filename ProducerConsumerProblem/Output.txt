@@ -1,0 +1,41 @@
+$ javac Solution.java
+$ java Solution
+Producer added 1307697373 into queue 
+Producer : Notifying that queue is no more empty now
+Consumer 1 consumed 1307697373 from queue 
+Consumer 1 : Notifying that queue may be empty now
+Consumer 2 : Queue is empty, waiting
+Consumer 3 : Queue is empty, waiting
+Producer added 2001825599 into queue 
+Producer : Notifying that queue is no more empty now
+Consumer 1 consumed 2001825599 from queue 
+Consumer 1 : Notifying that queue may be empty now
+Consumer 2 : Queue is empty, waiting
+Consumer 3 : Queue is empty, waiting
+Producer added 1482446792 into queue 
+Producer : Notifying that queue is no more empty now
+Consumer 2 consumed 1482446792 from queue 
+Consumer 2 : Notifying that queue may be empty now
+Consumer 3 : Queue is empty, waiting
+Producer added -706117913 into queue 
+Producer : Notifying that queue is no more empty now
+Consumer 2 consumed -706117913 from queue 
+Consumer 2 : Notifying that queue may be empty now
+Consumer 3 : Queue is empty, waiting
+Producer added -1771848646 into queue 
+Producer : Notifying that queue is no more empty now
+Consumer 3 consumed -1771848646 from queue 
+Consumer 3 : Notifying that queue may be empty now
+Producer added -1867365014 into queue 
+Producer : Notifying that queue is no more empty now
+Consumer 3 consumed -1867365014 from queue 
+Consumer 3 : Notifying that queue may be empty now
+Producer added 1976795110 into queue 
+Producer : Notifying that queue is no more empty now
+Producer added 1346353368 into queue 
+Producer : Notifying that queue is no more empty now
+Producer added 1171845073 into queue 
+Producer : Notifying that queue is no more empty now
+Producer added 1053509014 into queue 
+Producer : Notifying that queue is no more empty now
+$ 

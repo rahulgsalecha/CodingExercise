@@ -1,0 +1,19 @@
+The provided code snippet may encounter following potential problems :
+
+1. Producer keeps on adding elements to the queue regardless of the queue capacity.
+2. Producer is unaware of the status of elements being removed from the queue by the Consumers
+3. Consumer can run in an infinite loop to see if elements are available in queue to process.
+4. Consumer is not notifying the Producer and other consumers that it has removed an element.
+5. There is no thread safe access of element from the queue.
+
+The potential solutions we can think of to solve this problem are :
+
+1. Producer should monitor the queue size and enter into sleep/delay/wait mode when queue size is full.
+    This can be done by implementing a blocking queue of fixed size. In this way, the producer will wait
+    for the elements to be removed from queue by consumers when queue is full.
+2. Consumer should monitor whether queue is empty or not and if it empty, the cosumer enters sleep/delay/wait mode.
+    It will resume operations when elements are available for processing.
+    This can also be achieved using blocking queue implementation.
+3. Use Thread-safe queues.
+
+

@@ -9,6 +9,7 @@ Upon receiving the signal, wait() will unblock and re-acquire the mutex. There a
 to process the items where the queue will not build up. Context switch can occur anywhere in the code. 
 Please describe how the bug can occur and provide a fix. 
 
+
 Producer
 while (true) {
     item = generate_item()
@@ -17,6 +18,7 @@ while (true) {
     mutex.unlock()
     condition.signal()
 }
+
 
 Consumers
 while(true) {
